@@ -21,8 +21,9 @@ namespace GDIPlus_1
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Brush mybrush = new SolidBrush(Color.Black, 1);
-            Pen mypen = new Pen(mybrush,5);
+            HatchBrush mybrush = new HatchBrush(HatchStyle.DarkVertical
+           Color.White,Color.Violet);
+           Pen mypen = new Pen(mybrush,5);
             g.DrawRectangle(mypen, 10, 10, 200, 200);
            // mypen.Width = 4;
            // mypen.Color = Color.Pink;
