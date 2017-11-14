@@ -24,23 +24,14 @@ namespace GDIPlus_1
          
             Bitmap bmp = new Bitmap("D:\\Capture.JPG");
             this.SetClientSizeCore(bmp.Width, bmp.Height);
-            Rectangle topLeft = new Rectangle(0, 0, bmp.Width /2, bmp.Height /2);
-            Rectangle topRight = new Rectangle(bmp.Width /2, 0, bmp.Height /2, bmp.Height /2);
-            Rectangle bottomLeft = new Rectangle(0, bmp.Height / 2, bmp.Width / 2, bmp.Height / 2);
-            Rectangle bottomRight = new Rectangle(bmp.Width / 2, bmp.Height / 2, bmp.Width /2, bmp.Height /2);
-
-            bmp.RotateFlip(RotateFlipType.RotateNoneFlipNone);
-            e.Graphics.DrawImage(bmp, topLeft);
-            bmp.RotateFlip(RotateFlipType.Rotate180FlipNone);
-            e.Graphics.DrawImage(bmp, topRight);
-            bmp.RotateFlip(RotateFlipType.Rotate180FlipNone);
-            e.Graphics.DrawImage(bmp, bottomLeft);
-            bmp.RotateFlip(RotateFlipType.Rotate180FlipNone);
-            e.Graphics.DrawImage(bmp, bottomRight);
-
-
-            //g.DrawImage(bmp, destrect, srcrect, GraphicsUnit.Pixel);
-       //     g.DrawImage(bmp, 10, 10);
+            Rectangle destRect = new Rectangle(0, 0, bmp.Width /2, bmp.Height /2);
+            Brush myBrush = new SolidBrush(Color.Coral);
+            g.DrawImage(bmp, destRect);
+            g.DrawString("Hello World",
+                new Font("Verdana" , 30, FrameStyle.Bold),
+                myBrush,
+                0,
+                0);
             g.Dispose();
         }
         
