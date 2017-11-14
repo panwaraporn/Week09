@@ -25,7 +25,7 @@ namespace GDIPlus_1
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            LinearGradientBrush pnlGdt = new LinearGradientBrush(panel1.ClientRectangle,
+            LinearGradientBrush pnlGdt = new LinearGradientBrush(panel1.ClientRectangle, 
                 Color.Yellow, Color.Navy, 0f, true);
             e.Graphics.FillRectangle(pnlGdt, panel1.ClienRectangle);
             pnlGdt.Dispose();
@@ -33,7 +33,7 @@ namespace GDIPlus_1
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            LinearGradientBrush pnlGdt = new LinearGradientBrush(panel2.ClientRectangle,
+            LinearGradientBrush pnlGdt = new LinearGradientBrush(panel2.ClientRectangle, 
                 Color.Yellow, Color.Navy, 90f, true);
             e.Graphics.FillRectangle(pnlGdt, panel2.ClienRectangle);
             pnlGdt.Dispose();
